@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ./partials/head.ejs %>
+
+    <body>
+        <%- include ./partials/header.ejs %>
+            <main>
+                <h2>
+                    <%- title%>
+                </h2>
+                <section class="container-info">
+                    <% launches.forEach((data) => { console.log(data)%>
+                        <article>
+                            <h2>
+                                <%-data.mission_name%>
+                            </h2>
+                            <div>
+                                <img src=<%-data.links.mission_patch_small%>>
+                            </div>
+                            <p>Flight number:
+                                <%-data.mission_name%>
+                            </p>
+                            <p>Launch year:
+                                <%-data.launch_year%>
+                            </p>
+                            <p>Rocket:
+                                <%-data.rocket.rocket_name%>
+                            </p>
+                        </article>
+                        </a>
+                        <% }) %>
+                            <div class="loading-container">
+                                <div class="loading-animation">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                </section>
+            </main>
+            <script src="../dist/bundle.js"></script>
+    </body>
+
+</html>

@@ -1,16 +1,21 @@
 const fetch = require('node-fetch');
+const requestOptions = {
+    method: "GET",
+    redirect: "follow"
+};
 
 
-function getPosts(req, res) {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+function getData(req, res) {
+    fetch(`https://api.spacexdata.com/v3/launches`)
         .then(res => res.json())
         .then(body => {
-            res.render('posts', {
-                title: 'Posts', // We use this for the page title, see views/partials/head.ejs
-                postData: body
+            res.render('overview', {
+                title: 'Launches', // We use this for the page title, see views/partials/head.ejs
+                launches: body
             });
         })
 }
+
 
 function getPost(req, res) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${req.params.id}`)
@@ -18,7 +23,7 @@ function getPost(req, res) {
         .then(body => {
             // Render the page using the 'posts' view and our body data
             res.render('post', {
-                title: 'Posts', // We use this for the page title, see views/partials/head.ejs
+                title: 'Launches', // We use this for the page title, see views/partials/head.ejs
                 postData: body
             });
         })
@@ -26,6 +31,6 @@ function getPost(req, res) {
 
 
 module.exports = {
-    getPosts,
+    getData,
     getPost
 }

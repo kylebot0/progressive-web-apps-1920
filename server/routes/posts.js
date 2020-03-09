@@ -2,11 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 const {
-    getPosts,
+    getData,
     getPost
 } = require('../controllers/routing')
 
-router.get('/', getPosts)
+router.get('/', getData)
     .get('/:id', getPost);
 
 
