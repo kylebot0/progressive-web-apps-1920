@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ./partials/head.ejs %>
+
+    <body>
+        <%- include ./partials/header.ejs %>
+            <main>
+                <%- include ./partials/buttons.ejs %>
+                    <section class="container-info">
+                        <h2>
+                            <%- title %>
+                        </h2>
+                        <% launches.forEach((data) => { console.log(data)%>
+                            <article>
+                                <h2>
+                                    <%- data.rocket_name%>
+                                </h2>
+                                <div class='no-image'>
+                                    <p>No image available</p>
+                                </div>
+                                <p>Stages:
+                                    <%- data.stages%>
+                                </p>
+                                <p>Boosters:
+                                    <%- data.boosters%>
+                                </p>
+                                <p>Engines:
+                                    <%- data.engines.number%>
+                                </p>
+                                <a href="<%- data.rocket_id%>">More info
+                                </a>
+                            </article>
+
+                            <% }) %>
+                    </section>
+                    <%- include ./partials/loader.ejs %>
+
+            </main>
+            <script src="../dist/bundle.js"></script>
+    </body>
+
+</html>
