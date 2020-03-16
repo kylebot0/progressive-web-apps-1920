@@ -1,0 +1,36 @@
+<%- include ../layouts/_toppage.ejs %>
+    <section class="container-info">
+        <h2>
+            <%- title %>
+        </h2>
+        <% launches.forEach((data) => { console.log(data)%>
+            <article>
+                <h2>
+                    <%- data.capsule_id%>
+                </h2>
+                <div class='no-image'>
+                    <p>No image available</p>
+                </div>
+                <p>Status:
+                    <%- data.status%>
+                </p>
+                <p>Missions:
+                    <% if (data.missions[0]) { %>
+                        <%- data.missions[0].name %>
+                            <% } else {%>
+                                None
+                                <% }%>
+
+                </p>
+                <p>Landings:
+                    <%- data.landings%>
+                </p>
+                <p>Type:
+                    <%- data.type%>
+                </p>
+                <a href="capsules/<%- data.capsule_serial%>">More info
+                                        </a>
+            </article>
+            <% }) %>
+    </section>
+    <%- include ../layouts/_bottompage.ejs %>

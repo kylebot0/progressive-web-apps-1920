@@ -1,0 +1,34 @@
+<%- include ../layouts/_toppage.ejs %>
+    <section class="container-info">
+        <h2>
+            <%- title %>
+        </h2>
+        <% launches.forEach((data) => { console.log(data)%>
+            <article>
+                <h2>
+                    <%- data.ship_name%>
+                </h2>
+                <% if (data.image) { %>
+                    <div>
+                        <img src=<%- data.image%>>
+                    </div>
+                    <% } else { %>
+                        <div class='no-image'>
+                            <p>No image available</p>
+                        </div>
+                        <% } %>
+                            <p>Ship type:
+                                <%- data.ship_type%>
+                            </p>
+                            <p>Ship roles:
+                                <%- data.roles%>
+                            </p>
+                            <p>Home port:
+                                <%- data.home_port%>
+                            </p>
+                            <a href="ships/<%- data.ship_id%>">More info
+                                </a>
+            </article>
+            <% }) %>
+    </section>
+    <%- include ../layouts/_bottompage.ejs %>

@@ -1,0 +1,29 @@
+<%- include ../layouts/_toppage.ejs %>
+    <section class="container-info">
+        <h2>
+            <%- title %>
+        </h2>
+        <% launches.forEach((data) => { console.log(data)%>
+            <article>
+                <h2>
+                    <%- data.rocket_name%>
+                </h2>
+                <div class='no-image'>
+                    <p>No image available</p>
+                </div>
+                <p>Stages:
+                    <%- data.stages%>
+                </p>
+                <p>Boosters:
+                    <%- data.boosters%>
+                </p>
+                <p>Engines:
+                    <%- data.engines.number%>
+                </p>
+                <a href="rocket/<%- data.rocket_id%>">More info
+                                </a>
+            </article>
+
+            <% }) %>
+    </section>
+    <%- include ../layouts/_bottompage.ejs %>
