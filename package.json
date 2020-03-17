@@ -5,7 +5,6 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon src/index.js",
-
         "build": "npm run build:minify",
         "build:manifest": "ncp public/manifest.json public",
         "build:minify": "TMP=/app/.tmp webpack && npm run build:start",

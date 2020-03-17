@@ -1,8 +1,8 @@
 const CORE_CACHE = 1
 const CORE_CACHE_NAME = `demo-core-v${CORE_CACHE}`
-const CORE_ASSETS = ["./", "./dist/styles.css", "./dist/fonts/BankGothic Md BT.ttf", "./img/logo.png", "./dist/main.bundle.js", "./offline"]
+const CORE_ASSETS = ["./", "./dist/styles.css", "./dist/fonts/BankGothic Md BT.ttf", "./img/logo.png", "./dist/main.bundle.js", "./offline", "./ships", "./launches", "./capsules", "./rocket", "/manifest.json"]
 
-self.addEventListener("install", (e) => {
+self.addEventListener('install', (e) => {
     console.log("Installed")
     e.waitUntil(
         caches.open(CORE_CACHE_NAME)
@@ -20,7 +20,6 @@ self.addEventListener("fetch", (e) => {
 
     const req = e.request
     console.log("Fetching:" + req)
-    if (isHtmlGetRequest(req)) {
         e.respondWith(
             caches.match(req)
             .then(cachedRes => {
@@ -32,8 +31,6 @@ self.addEventListener("fetch", (e) => {
                     .catch((err) => {})
             })
         )
-    }
-
 })
 
 function isHtmlGetRequest(req) {
