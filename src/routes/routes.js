@@ -9,7 +9,8 @@ const path = {
     getSingleLaunch,
     getSingleCapsule,
     getSingleRocket,
-    getSingleShip
+    getSingleShip,
+    getOffline
 } = require('../controllers/routesController')
 
 router.get('/', path.getLaunches)
@@ -20,7 +21,8 @@ router.get('/', path.getLaunches)
     .get('/capsules', path.getCapsules)
     .get('/capsules/:id', path.getSingleCapsule)
     .get('/rocket', path.getRockets)
-    .get('/rocket/:id', path.getSingleRocket);
+    .get('/rocket/:id', path.getSingleRocket)
+    .get('/offline', path.getOffline);
 
 
 // Make sure to export the router so it becomes available on imports

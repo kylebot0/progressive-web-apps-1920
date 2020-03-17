@@ -93,6 +93,10 @@ function getSingleRocket(req, res) {
         })
 }
 
+function getOffline(req, res) {
+    res.render('./pages/offline', {});
+}
+
 
 
 module.exports = {
@@ -103,5 +107,6 @@ module.exports = {
     getSingleLaunch,
     getSingleCapsule,
     getSingleRocket,
-    getSingleShip
+    getSingleShip,
+    getOffline
 }
