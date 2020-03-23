@@ -2,7 +2,7 @@ const express = require('express');
 const routing = require('./routes/routes')
 
 const config = {
-    port: 3000
+    port: 3000 || process.env.PORT
 }
 const app = express();
 
