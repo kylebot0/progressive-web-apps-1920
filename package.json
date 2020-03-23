@@ -4,6 +4,7 @@
     "description": "progressive-web-app",
     "main": "index.js",
     "scripts": {
+        "start": "node index.js",
         "dev": "nodemon src/index.js",
         "build": "npm run build:minify",
         "build:manifest": "ncp public/manifest.json public",
