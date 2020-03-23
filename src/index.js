@@ -7,9 +7,12 @@ const app = express();
 app.set('view engine', 'ejs')
     .set('views', 'src/views')
     .use(compression())
+    .use((req, res, next) => {
+        res.header('Cache-Control', 'max-age=2592000000');
+        next();
+    })
     .use(express.static('src/public'))
-    .use(routing)
-    ;
+    .use(routing);
 
 app.listen(port, function() {
     console.log(`Application started on port: ${port}`);
