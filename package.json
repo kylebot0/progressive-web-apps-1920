@@ -8,7 +8,7 @@
         "dev": "nodemon src/index.js",
         "build": "npm run build:minify",
         "build:manifest": "ncp public/manifest.json public",
-        "build:minify": "TMP=/app/.tmp webpack && npm run build:start",
+        "build:minify": "TMP=/app/.tmp webpack",
         "build:start": "node src/index.js"
     },
     "author": "Kyle Bot",
