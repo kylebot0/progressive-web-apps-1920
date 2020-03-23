@@ -15,6 +15,7 @@
     "license": "MIC",
     "dependencies": {
         "chalk": "^3.0.0",
+        "compression": "^1.7.4",
         "dotenv": "^8.2.0",
         "ejs": "^2.6.1",
         "ejs-lint": "^1.0.1",
