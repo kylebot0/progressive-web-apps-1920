@@ -20,6 +20,7 @@
         "ejs": "^2.6.1",
         "ejs-lint": "^1.0.1",
         "express": "^4.16.4",
+        "express-static-gzip": "^2.0.6",
         "node-fetch": "^2.6.0",
         "pug": "^2.0.4",
         "request": "^2.88.0",
