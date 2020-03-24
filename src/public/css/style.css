@@ -1,10 +1,12 @@
 @font-face {
     font-family: spacex;
     src: url(../css/fonts/BankGothic\ Md\ BT.ttf);
+    font-display: swap
 }
 @font-face {
     font-family: lato;
     src: url(../css/fonts/Lato-Regular.ttf);
+    font-display: swap
 }
 h1,
 h2,

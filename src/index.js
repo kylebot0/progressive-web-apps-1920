@@ -2,7 +2,14 @@ const express = require('express');
 const routing = require('./routes/routes')
 const compression = require('compression')
 const port = process.env.PORT || 3000
+// const spdy = require('spdy')
+// const fs = require('fs')
+// const path = require('path')
 const app = express();
+// const options = {
+//     key: fs.readFileSync(__dirname + '/server.key'),
+//     cert:  fs.readFileSync(__dirname + '/server.crt')
+// }
 
 app.set('view engine', 'ejs')
     .set('views', 'src/views')

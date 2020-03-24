@@ -22,9 +22,11 @@
         "express": "^4.16.4",
         "express-static-gzip": "^2.0.6",
         "node-fetch": "^2.6.0",
+        "openssl": "^1.1.0",
         "pug": "^2.0.4",
         "request": "^2.88.0",
         "shrink-ray-current": "^4.1.2",
+        "spdy": "^4.0.1",
         "webpack": "^4.42.0"
     },
     "devDependencies": {
