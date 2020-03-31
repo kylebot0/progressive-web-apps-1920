@@ -232,7 +232,7 @@ module.exports = {
 ## Installing 🔍
 To install this application and enter the repo write the following into your terminal:
 ```
-git clone https://github.com/kylebot0/web-app-from-scratch-1920.git && cd web-app-from-scratch-1920
+git clone https://github.com/kylebot0/progressive-web-apps-1920.git && cd progressive-web-apps-1920
 ```
 
 Because this project uses different modules, you'll have to npm install to get the different dependecies
@@ -253,8 +253,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Sources 📚
 Sources i used throughout the project.
 
-* https://docs.spacexdata.com/?version=latest
-* https://dev.to/kodnificent/how-to-build-a-router-with-vanilla-javascript-2a18
 
 ### Credits
 
