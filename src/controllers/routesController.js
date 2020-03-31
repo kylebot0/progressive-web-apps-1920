@@ -3,13 +3,24 @@ const requestOptions = {
     method: "GET",
     redirect: "follow"
 };
-
-
-function getLaunches(req, res) {
+function getOverview(req, res) {
+    console.log('test')
     fetch(`https://api.spacexdata.com/v3/launches`)
         .then(res => res.json())
         .then(body => {
-            res.render('./pages/overview', {
+            res.render('./pages/launches', {
+                title: 'Launches',
+                launches: body
+            });
+        })
+}
+
+function getLaunches(req, res) {
+    console.log('test')
+    fetch(`https://api.spacexdata.com/v3/launches`)
+        .then(res => res.json())
+        .then(body => {
+            res.render('./pages/launches', {
                 title: 'Launches',
                 launches: body
             });
@@ -100,6 +111,7 @@ function getOffline(req, res) {
 
 
 module.exports = {
+    getOverview,
     getLaunches,
     getShips,
     getCapsules,

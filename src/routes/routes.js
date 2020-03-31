@@ -2,6 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 const path = {
+    getOverview,
     getLaunches,
     getShips,
     getCapsules,
@@ -13,7 +14,7 @@ const path = {
     getOffline
 } = require('../controllers/routesController')
 
-router.get('/', path.getLaunches)
+router.get('/', path.getOverview)
     .get('/launches', path.getLaunches)
     .get('/launches/:id', path.getSingleLaunch)
     .get('/ships', path.getShips)

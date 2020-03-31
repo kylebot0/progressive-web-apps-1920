@@ -1,7 +1,7 @@
 const express = require('express');
 const routing = require('./routes/routes')
 const compression = require('compression')
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 // const spdy = require('spdy')
 // const fs = require('fs')
 // const path = require('path')

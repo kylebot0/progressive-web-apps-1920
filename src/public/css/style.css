@@ -14,7 +14,12 @@ h3 {
     font-family: spacex;
     color: white;
 }
-
+picture {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
 header img {
     width: 4em;
     height: 1.5em;
@@ -72,23 +77,33 @@ article a {
 }
 
 article>div {
-    height: 100%;
+     /* height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5em;
+    margin: 0.5em;  */
+    display: flex;
+    position: relative;
+    padding-bottom: 50%; /* calc(100%/(300/150)); */
+    height: 100%;
+    width: 50%;
 }
+
 
 .no-image {
     height: 200px;
     width: 200px;
     border: 1px solid grey;
+    padding-bottom: 0;
 }
 
 article img {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 main>section {
