@@ -106,7 +106,14 @@ https://docs.spacexdata.com/?version=latest
 
 ## Performance 
 ### Service worker
-The service worker adds the possibility to 
+The service worker adds the possibility to cache all the pages, stylesheets and js files. Besides that it can also render offline pages you've cached. When there is a page that isn't cached the service worker decides it should show the offline page. This greatly increases the speed the pictures and pages load in.
+![](https://github.com/kylebot0/progressive-web-apps-1920/blob/master/gh-images/without_sw.png)
+
+### Server side rendering 
+Because the pages are being rendered on the server, the fetches that are thrown are much faster and vastly increase the building of the DOM. 
+
+### Compression
+Using a simple package 
 - [x] Add service worker
 - [x] Add offline mode
 - [x] Server side rendering with EJS
