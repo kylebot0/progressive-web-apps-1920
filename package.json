@@ -5,11 +5,10 @@
     "main": "index.js",
     "scripts": {
         "start": "node src/index.js",
-        "dev": "nodemon src/index.js",
+        "dev": "webpack && nodemon src/index.js",
         "build": "npm run build:minify",
         "build:manifest": "ncp public/manifest.json public",
-        "build:minify": "webpack",
-        "build:start": "node src/index.js"
+        "build:minify": "webpack"
     },
     "author": "Kyle Bot",
     "license": "MIC",

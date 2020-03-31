@@ -222,7 +222,13 @@ section>h2 {
 
 .single-item>div {
     height: 100%;
-    width: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    position: relative;
+    padding-bottom: 0; /* calc(100%/(300/150)); */
     /* flex-grow: 1; */
     /* height: 50%;
     width: 50%; */
